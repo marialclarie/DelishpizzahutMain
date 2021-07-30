@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-6 client-input">
                 <h1>Client's Input</h1>
-                <form class="cinputs">
+                <form class="cinputs" onsubmit="return fsubmit()">
                     <br>
                     <label class="form-label" for="">Name: </label><br>
                     <input class="form-control" type="text" name="" id="name"><br>
@@ -54,17 +54,17 @@
 
                     <label for="">Delivery</label><br>
                     <input type="radio" name="delivery" id="delivery"><label for=""> To be Delivered</label>
-                    <input type="radio" name="delivery" id="pick"><label for=""> Pick from the shop</label><br>
+                    <input type="radio" name="delivery" id="pick"><label for=""> Pick from the shop</label><br><br>
                     <div class="del-details" style="display: none;">
                         <label for="">Location</label>
-                        <input type="text"  id="location"><br>
+                        <input type="text"  id="location"><br><br>
                         <label for="">Street</label>
                         <input type="text" name="" id="street">
 
 
                     </div>
                     <br>
-                    <button class="bg-success" id="submit">Submit Order</button>
+                    <button class="bg-warning" id="submit">Submit Order</button>
                     <br><br>
                     
                 </form>
