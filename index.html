@@ -38,6 +38,7 @@
                         <option value="medium">Medium Pizza @ Ksh 800</option>
                         <option value="large">Large Pizza @ Ksh 1200</option>
                     </select><br><br>
+
                     <label for="">Select Crust</label><br>
                     <select class="form-control" id="crust">
                         <option value=""></option>
@@ -45,6 +46,7 @@
                         <option value="stuffed">Stuffed @ Ksh 100</option>
                         <option value="gfree">Gluten-free @ Ksh 150</option>
                     </select>
+
                     <br><br>
                     <label for="">Select Toppings: </label><br>
                     <input  type="checkbox" name="" id="ham"><label for=""> Ham</label>
@@ -54,27 +56,32 @@
 
                     <label for="">Delivery</label><br>
                     <input type="radio" name="delivery" id="delivery"><label for=""> To be Delivered</label>
-                    <input type="radio" name="delivery" id="pick"><label for=""> Pick from the shop</label><br>
+                    <input type="radio" name="delivery" id="pick"><label for=""> Pick from the shop</label><br><br>
                     <div class="del-details" style="display: none;">
                         <label for="">Location</label>
-                        <input type="text"  id="location"><br>
+                        <input type="text"  id="location"><br><br>
                         <label for="">Street</label>
                         <input type="text" name="" id="street">
 
 
-                    </div>
+                    </div><br>
+                    <label for="">Number of pizza</label>
+                    <input type="number" name="" id="noOfPizza"><br>
                     <br>
-                    <button class="bg-success" id="submit">Submit Order</button>
+                    <!-- <button class="bg-warning" id="submit" style="margin-left:150px;">Submit Order</button> -->
                     <br><br>
+                    <button type="submit" class="submit">Submit Order</button>
                     
-                </form>
+                </form><br>
+                <button class="bg-warning" id="checkdetails" style="margin-left:150px;"> Check Order</button>
+                <br> <br>
             </div>
 
             <div class="col-md-6 order-details">
                 <h1>Order Details</h1>
                 
                 <div class="details">
-                    <p id="nameOut"></p>
+                    <p  id="nameOut"></p>
                     <p id="sizeOut"></p>
                     <p id="crustOut"></p>
                     <p id="toppings"></p>

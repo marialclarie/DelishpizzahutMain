@@ -35,7 +35,13 @@ body{
 
 }
 .details{
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 30px;
-    
+    height: 530px;
+    border-radius: 20px;
+    color: white;
+    background: green;
+    padding-left: 50px;
+
 }
+
