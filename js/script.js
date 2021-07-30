@@ -27,9 +27,9 @@ $(document).ready(function(){
     $('#checkdetails').click(function(){
      
         
-        $('#nameOut').append("Dear"+uName+('\n'))
+        $('#nameOut').append("Dear "+uName+('\n'))
         $('#sizeOut').append("You Ordered "+pSize)
-        $('#crustOut').append("You Ordered "+crust)
+        $('#crustOut').append("With "+crust+" as toppings")
       
     })
     
