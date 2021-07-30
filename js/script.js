@@ -1,3 +1,5 @@
-$(document).ready(function(){
-    alert('hello')
-})
+// $(document).ready(function(){
+//     $("#delivery").checked(function(){
+//         $('.del-details').show();
+//     })
+// })
