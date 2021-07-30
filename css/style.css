@@ -1,0 +1,16 @@
+.intro{
+    background:black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+}
+.intro h1{
+    color: white;
+    padding-top: 50px;
+    
+}
+.intro img{
+    border-radius: 50%;
+}
