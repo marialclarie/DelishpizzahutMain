@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .intro{
     background:black;
     background-repeat: no-repeat;
