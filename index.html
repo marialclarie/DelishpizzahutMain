@@ -29,30 +29,30 @@
                 <h1>Client's Input</h1>
                 <form class="cinputs">
                     <br>
-                    <label for="">Name: </label>
-                    <input type="text" name="" id="name"><br>
-                    <label for="">Select Pizza Size: </label>
-                    <select id="pizzaSize">
+                    <label class="form-label" for="">Name: </label><br>
+                    <input class="form-control" type="text" name="" id="name"><br>
+                    <label for="">Select Pizza Size: </label><br>
+                    <select class="form-control" id="pizzaSize">
                         <option value=""></option>
                         <option value="small">Small Pizza @ Ksh 500</option>
                         <option value="medium">Medium Pizza @ Ksh 800</option>
                         <option value="large">Large Pizza @ Ksh 1200</option>
                     </select><br><br>
-                    <label for="">Select Crust</label>
-                    <select id="crust">
+                    <label for="">Select Crust</label><br>
+                    <select class="form-control" id="crust">
                         <option value=""></option>
                         <option value="crispy">Crispy @ Ksh.100</option>
                         <option value="stuffed">Stuffed @ Ksh 100</option>
                         <option value="gfree">Gluten-free @ Ksh 150</option>
                     </select>
                     <br><br>
-                    <label for="">Select Toppings: </label>
-                    <input type="checkbox" name="" id="ham"><label for=""> Ham</label>
+                    <label for="">Select Toppings: </label><br>
+                    <input  type="checkbox" name="" id="ham"><label for=""> Ham</label>
                     <input type="checkbox" name="" id="mushroom"><label for=""> Mushroom</label>
                     <input type="checkbox" name="" id="chicken"><label for=""> Chicken</label>
                     <br><br>
 
-                    <label for="">Delivery</label>
+                    <label for="">Delivery</label><br>
                     <input type="radio" name="delivery" id="delivery"><label for=""> To be Delivered</label>
                     <input type="radio" name="delivery" id="pick"><label for=""> Pick from the shop</label><br>
                     <div class="del-details" style="display: none;">
@@ -72,6 +72,14 @@
 
             <div class="col-md-6 order-details">
                 <h1>Order Details</h1>
+                
+                <div class="details">
+                    <p id="nameOut"></p>
+                    <p id="sizeOut"></p>
+                    <p id="crustOut"></p>
+                    <p id="toppings"></p>
+
+                </div>
             </div>
         </div>
 
