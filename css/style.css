@@ -14,3 +14,11 @@
 .intro img{
     border-radius: 50%;
 }
+
+    /* Client form section */
+.client-input h1{
+    text-align: center;
+}
+.client-input form{
+    padding-left: 20px;
+}
