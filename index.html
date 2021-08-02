@@ -1,96 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
     <script src="/js/jquery-3.6.0.js"></script>
     <script src="./js/script.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="intro">
-        <img src="./assets/pizza1.jpg" alt="" height="300px" width="300px">
-        <h1>Delish Pizza Hut</h1>
-        <p>
-            Delish pizza hut is a homemade pizza dough is produced in-house daily and is another
-             reason why the pizza <br> at Delish is always tasty.  The Twisty Bread, Crispy, Stuffed, 
-             Gluten-free and the additional value-for-money options on <br> the type of crust and  
-             delivery that keep our satisfied customers coming back time after time. 
-        </p>
-        <br><br><br>
-
+      <img src="./assets/pizza1.jpg" alt="" height="300px" width="300px" />
+      <h1>Delish Pizza Hut</h1>
+      <p>
+        Delish pizza hut is a homemade pizza dough is produced in-house daily
+        and is another reason why the pizza <br />
+        at Delish is always tasty. The Twisty Bread, Crispy, Stuffed,
+        Gluten-free and the additional value-for-money options on <br />
+        the type of crust and delivery that keep our satisfied customers coming
+        back time after time.
+      </p>
+      <br /><br /><br />
     </div>
     <div class="mwili">
-        <div class="row">
-            <div class="col-md-6 client-input">
-                <h1>Client's Input</h1>
-                <form class="cinputs">
-                    <br>
-                    <label class="form-label" for="">Name: </label><br>
-                    <input class="form-control" type="text" name="" id="name"><br>
-                    <label for="">Select Pizza Size: </label><br>
-                    <select class="form-control" id="pizzaSize">
-                        <option value=""></option>
-                        <option value="small">Small Pizza @ Ksh 500</option>
-                        <option value="medium">Medium Pizza @ Ksh 800</option>
-                        <option value="large">Large Pizza @ Ksh 1200</option>
-                    </select><br><br>
-
-                    <label for="">Select Crust</label><br>
-                    <select class="form-control" id="crust">
-                        <option value=""></option>
-                        <option value="crispy">Crispy @ Ksh.100</option>
-                        <option value="stuffed">Stuffed @ Ksh 100</option>
-                        <option value="gfree">Gluten-free @ Ksh 150</option>
-                    </select>
-
-                    <br><br>
-                    <label for="">Select Toppings: </label><br>
-                    <input  type="checkbox" name="" id="ham"><label for=""> Ham</label>
-                    <input type="checkbox" name="" id="mushroom"><label for=""> Mushroom</label>
-                    <input type="checkbox" name="" id="chicken"><label for=""> Chicken</label>
-                    <br><br>
-
-                    <label for="">Delivery</label><br>
-                    <input type="radio" name="delivery" id="delivery"><label for=""> To be Delivered</label>
-                    <input type="radio" name="delivery" id="pick"><label for=""> Pick from the shop</label><br><br>
-                    <div class="del-details" style="display: none;">
-                        <label for="">Location</label>
-                        <input type="text"  id="location"><br><br>
-                        <label for="">Street</label>
-                        <input type="text" name="" id="street">
-
-
-                    </div><br>
-                    <label for="">Number of pizza</label>
-                    <input type="number" name="" id="noOfPizza"><br>
-                    <br>
-                    <!-- <button class="bg-warning" id="submit" style="margin-left:150px;">Submit Order</button> -->
-                    <br><br>
-                    <button type="submit" class="submit">Submit Order</button>
-                    
-                </form><br>
-                <button class="bg-warning" id="checkdetails" style="margin-left:150px;"> Check Order</button>
-                <br> <br>
+      <div class="row">
+        <div class="col-md-6 client-input">
+          <h1>Client's Input</h1>
+          <!--start forms-->
+          <form id="formMain">
+            <!-- Username input -->
+            <div class="mb-3 row">
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Name</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="userName" />
+                <p id="error1" class="error-mess">
+                  This field should be filled *
+                </p>
+              </div>
             </div>
-
-            <div class="col-md-6 order-details">
-                <h1>Order Details</h1>
-                
-                <div class="details">
-                    <p  id="nameOut"></p>
-                    <p id="sizeOut"></p>
-                    <p id="crustOut"></p>
-                    <p id="toppings"></p>
-
+            <!-- pizza size selectio -->
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">Select Size</label>
+              <div class="col-sm-10">
+                <select id="pizzaSize" class="form-select" required>
+                  <option value=""></option>
+                  <option value="small">Small Pizza @ Ksh 600</option>
+                  <option value="medium">Medium Pizza @ Ksh. 850</option>
+                  <option value="large">Large Pizza @ Ksh. 1200</option>
+                </select>
+                <p id="error2" class="error-mess">Select Pizza size *</p>
+              </div>
+            </div>
+            <!-- Crust Selection -->
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">Select Crust</label>
+              <div class="col-sm-10">
+                <select id="crust" class="form-select" required>
+                  <option value=""></option>
+                  <option>Cripsy</option>
+                  <option>Stuffed</option>
+                  <option>Glutten-Free</option>
+                </select>
+                <p id="error3" class="error-mess">Select crust *</p>
+              </div>
+            </div>
+            <!-- Selecting Toppings -->
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">Toppings</label>
+              <div class="col-sm-10">
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="toppings"
+                    value="checken"
+                    id="topping1"
+                  />
+                  <label class="form-check-label" for="flexSwitchCheckDefault"
+                    >Chicken Hawaiian</label
+                  >
                 </div>
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="toppings"
+                    value="beef"
+                    id="topping2"
+                  />
+                  <label class="form-check-label" for="flexSwitchCheckDefault"
+                    >Beef Pepperoni</label
+                  >
+                </div>
+              </div>
+              <br /><br />
+              <!-- Number of pizza -->
+              <div>
+                <br />
+                <div class="mb-3 row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label"
+                    >No of Pizza</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="no-of-pizza"
+                    />
+                    <p id="error6" class="error-mess">
+                      This field should be filled *
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- Delivery option -->
+            <div class="mb-3 row" style="display: none">
+              <label class="col-sm-2 col-form-label">Delivery</label>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="fordelivery"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    To Be Deliverd
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="forpickup"
+                    value="option2"
+                  />
+                  <label class="form-check-label" for="exampleRadios2"
+                    >Pick By Self
+                  </label>
+                </div>
+                <p id="error4" class="error-mess">select a delivery method *</p>
+              </div>
+            </div>
+            <!-- Delivery Details -->
+            <div class="mb-3 row" style="display: none" id="deldetails">
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Phone Number</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="userDeliveryName" />
+              </div>
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Location</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="location" />
+              </div>
+              <br /><br />
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Street</label
+              >
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="street" />
+              </div>
+            </div>
+            <a href="#" id="checkdetails" class="btn btn-primary"
+              >Check Order Details</a
+            ><br /><br />
+            <button
+              id="submit-btn"
+              style="display: none"
+              class="btn btn-success"
+              type="submit"
+            >
+              Place Order
+            </button>
+            <button
+              type="reset"
+              class="btn btn-danger"
+              style="display: none"
+              id="reset-order"
+            >
+              Reset Order
+            </button>
+          </form>
+
+          <!--End of form-->
+          <button
+            class="bg-warning"
+            id="checkdetails"
+            style="margin-left: 150px"
+          >
+            Check Order
+          </button>
+          <br />
+          <br />
         </div>
 
+        <div class="col-md-6 order-details">
+          <h1>Order Details</h1>
+
+          <div class="details">
+            <p id="nameOut"></p>
+            <p id="sizeOut"></p>
+            <p id="crustOut"></p>
+            <p id="toppings"></p>
+          </div>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
